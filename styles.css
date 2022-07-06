@@ -12,13 +12,21 @@ body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Oswald', sans-serif;
+    font-family: Helvetica, sans-serif;
 }
 @font-face {
-    font-family: 'Oswald', sans-serif;
+    font-family: Helvetica, sans-serif;
+}
+html {
+    font-size: 16px;
 }
 a {
     text-decoration: none !important;
+    color: white !important;
+}
+.headerText {
+    color: var(--marketGatePink);
+    font-family: 'Oswald', sans-serif;
 }
 .fontWhite {
     color: white !important;
@@ -37,7 +45,7 @@ nav {
     display: flex;
     height: 80px;
     width: 100%;
-    background: white;
+    background: var(--marketGateGrey);
     align-items: center;
     justify-content: space-between;
     padding: 0 50px 0 25px;
@@ -65,9 +73,9 @@ nav ul li {
 }
 nav ul li a {
     height: 35%;
-    color: black !important;
+    color: white !important;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 500;
     padding: 8px 15px;
     letter-spacing: 1px;
@@ -106,14 +114,14 @@ input[type="checkbox"] {
         content: "\f00d";
     }
     nav {
-        background: white;
+        background: var(--marketGateGrey);
         width: 100%;
     }
     nav ul {
         position: fixed;
         top: 80px;
         right: -100%;
-        background: white;
+        background: var(--marketGateGrey);
         height: 100vh;
         width: 100%;
         text-align: center;
@@ -132,7 +140,7 @@ input[type="checkbox"] {
         margin-right: -100%;
         display: block;
         font-size: 20px;
-        color: black;
+        color: white;
     }
     #click:checked ~ ul li a {
         margin-left: 0;
@@ -146,7 +154,6 @@ input[type="checkbox"] {
     }
 }
 .section-container {
-    background-color: var(--overairGrey);
     --bs-gutter-x: 1.5rem;
     --bs-gutter-y: 0;
     display: flex;
@@ -157,37 +164,25 @@ input[type="checkbox"] {
     width: 50%;
 }
 .section-container .columns.image {
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 .section-container .columns.content .content-container {
+    text-align: center;
     padding: 40px 50px;
 }
 .section-container .columns.content .content-container h1 {
-    font-weight: 1800;
-    font-size: 38px;
+    font-weight: 100;
+    font-size: 48px;
 }
 .section-container .columns.content .content-container h2 {
     font-weight: 1000;
 }
-.section-container .columns.content .content-container .android {
-    border-bottom: 3px solid var(--overairPink);
-    border-radius: 5px;
-    transform-origin: right;
-}
-.section-container .columns.content .content-container .apple {
-    border-bottom: 3px solid #666666;
-    border-radius: 5px;
-    transform-origin: left;
-}
-.section-container .columns.content .overairD {
-    border-bottom: 3px solid var(--overairPink);
-    border-radius: 5px;
-}
 .section-container .columns.content .content-container p {
-    font-weight: 550;
+    font-size: 20px;
+    font-weight: 500;
     margin-bottom: 7px;
-    font-size: 17px;
 }
 @media screen and (max-width:767px) {
     .section-container {
@@ -220,9 +215,9 @@ input[type="checkbox"] {
     }
 }
 .bg {
-    padding-block: 18rem;
+    padding-block: 19rem;
     margin-block-end: 0;
-    background-image: url("Images/pexels-maurício-mascaro-788824.jpg");
+    background-image: url("Images/bg.jpg");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -230,21 +225,26 @@ input[type="checkbox"] {
 }
 .aboutUs {
     width: 100vw;
-    height: 400px;
-    background-color: white;
+    height: 300px;
+    background-color: var(--marketGateGrey);
 }
 .facebook {
     height: 500px;
     width: 100vw;
-    background-color: var(--marketGateGrey);
+    background-color: white;
 }
 .footer {
-    height: 75px;
-    border-top: 1px solid var(--marketGatePink);
-}
-.grid {
     display: grid;
     place-items: center;
+    height: 75px;
+    width: 100%;
+    border-top: 1px solid var(--marketGatePink);
+    background-color: #333;
+}
+.grid {
+    display: flex;
+    align-content: center;
+    justify-content: center;
 }
 .bigH1 {
     font-size: 75px;
@@ -267,4 +267,21 @@ input[type="checkbox"] {
     width: 100vw;
     height: 350px;
     background-color: blue;
+}
+.blink {
+    animation: blink 1s ease-in-out infinite alternate;
+}
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.iframes {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin-top: 0.5rem;
 }
