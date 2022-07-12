@@ -127,6 +127,7 @@ input[type="checkbox"] {
         text-align: center;
         display: block;
         transition: all 0.3s ease;
+        z-index: 1;
     }
     #click:checked ~ ul {
         right: 0;
@@ -173,11 +174,12 @@ input[type="checkbox"] {
     padding: 40px 50px;
 }
 .section-container .columns.content .content-container h1 {
-    font-weight: 100;
-    font-size: 48px;
+    font-weight: 800;
+    font-size: 54px;
 }
 .section-container .columns.content .content-container h2 {
-    font-weight: 1000;
+    font-size: 38px;
+    font-weight: 450;
 }
 .section-container .columns.content .content-container p {
     font-size: 20px;
@@ -207,11 +209,23 @@ input[type="checkbox"] {
     }
     .section-container .columns.content .content-container h2 {
         font-size: 28px;
-        font-weight: 800;
+        font-weight: 900;
     }
     .section-container .columns.content .content-container h2 p {
         justify-content: center;
         align-content: center;
+    }
+    .section-container .columns.content .content-container .textContainerLeft {
+        text-align: center !important;
+    }
+    .pSep {
+        font-size: 15px !important;
+    }
+    .h1Sep {
+        font-size: 32px !important;
+    }
+    .bigH1 {
+        font-size: 48px !important;
     }
 }
 .bg {
@@ -225,7 +239,7 @@ input[type="checkbox"] {
 }
 .aboutUs {
     width: 100vw;
-    height: 300px;
+    height: 450px;
     background-color: var(--marketGateGrey);
 }
 .facebook {
@@ -256,12 +270,21 @@ input[type="checkbox"] {
 }
 .pSep {
     text-align: center;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 600;
 }
 .textContainer {
     text-align: center;
-    width: 50%;
+    width: 75%;
+}
+.textContainerLeft {
+    text-align: left !important;
+}
+.textContainerRight {
+    text-align: right !important;
+}
+.headerBorder {
+    border-bottom: 2px solid var(--marketGatePink) !important;
 }
 .blue {
     width: 100vw;
