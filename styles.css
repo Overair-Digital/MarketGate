@@ -225,7 +225,10 @@ input[type="checkbox"] {
         font-size: 32px !important;
     }
     .bigH1 {
-        font-size: 48px !important;
+        font-size: 40px !important;
+    }
+    .textContainer {
+        width: 95% !important;
     }
 }
 .bg {
@@ -239,7 +242,7 @@ input[type="checkbox"] {
 }
 .aboutUs {
     width: 100vw;
-    height: 450px;
+    height: 475px;
     background-color: var(--marketGateGrey);
 }
 .facebook {
